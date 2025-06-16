@@ -1,0 +1,339 @@
+<!-- <a href='https://www.freepik.com/vectors/layout'>Layout vector created by stories - www.freepik.com</a>
+<a href='https://www.freepik.com/vectors/people'>People vector created by stories - www.freepik.com</a>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+-->
+  <title>SORBET - EXT edition</title>
+<link rel="icon" type="image/x-icon" href="media/imgs/sorbet-fav.png">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<link rel="stylesheet" href="css/designCSS.css" />
+<link rel="stylesheet" href="css/sorbet_game.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-te/1.4.0/jquery-te.min.css" integrity="sha512-i/BB4iyU9djSiXob0SEGOfX3Ld6mfBkFMMocNQV0VHmhtM9roKQuOo1wTDa9h+q9J0EjL3O3MrwrIMOoiQ6kxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-te/1.4.0/jquery-te.min.js" integrity="sha512-813LH2NdwwzXnVfsmzSuAyyit5bRFdh997hN9Vzm0cdx3LdZV7TZNNb2Ag0dgJPD3J1Xn1Alg2YW70id+RtLrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://kit.fontawesome.com/80af97c1ce.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"  crossorigin="anonymous"></script>
+<script src="js-libraries/pdfmake-master/pdfmake-master/build/pdfmake.min.js"></script>
+<script src="js-libraries/pdfmake-master/pdfmake-master/build/vfs_fonts.js"></script>
+
+<script src="js-libraries/moment/moment.js"></script>
+<!---<script src="https://unpkg.com/blockly/blockly.min.js"></script>--->
+
+<!--<script src="https://unpkg.com/blockly/blockly_compressed.js"></script>
+<script src="https://unpkg.com/blockly/blocks_compressed.js"></script>
+<script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
+<script src="https://unpkg.com/blockly/msg/en.js"></script>-->
+<!-- Load Blockly core -->
+<script src="js-libraries/blockly-11.2.2/package/blockly_compressed.js"></script>
+<!-- Load the default blocks -->
+<script src="js-libraries/blockly-11.2.2/package/blocks_compressed.js"></script>
+<!-- Load a generator -->
+<script src="js-libraries/blockly-11.2.2/package/javascript_compressed.js"></script>
+<!-- Load a message file -->
+<script src="js-libraries/blockly-11.2.2/package/msg/en.js"></script>
+
+
+<script src="../../js/wiil.js"></script>
+<script type="text/javascript" src="jsCodes/analytics.js"></script>
+<script type="text/javascript" src="jsCodes/API.js"></script>
+<script type="text/javascript" src="jsCodes/states.js"></script>
+
+<script type="text/javascript" src="jsCodes/languages.js"></script>
+<script type="text/javascript" src="jsCodes/languageToggle.js"></script>
+<script type="text/javascript" src="jsCodes/initialize.js"> </script>
+
+<script type="text/javascript" src="jsCodes/SorterMain.js"> </script>
+<script type="text/javascript" src="jsCodes/designMode.js"></script>
+<script type="text/javascript" src="jsCodes/handleFiles.js"></script>
+<script type="text/javascript" src="jsCodes/speech.js"></script>
+
+
+</head>
+
+<body>
+
+
+<video autoplay hidden id="videoElement"></video>
+  <nav class="navbar navbar-expand-sm navbar-custom fixed-top" >
+    <input id="language"  type = "image" src = "media/imgs/greek.png" width="50"
+     height="50"  style="visibility:vissible"   title="Change Language">
+    <button type="button" id="homeButton" class="btn btn-light">Home</button>
+
+    <!--main dropdown navigation-->
+    <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span id="examples">
+            Online Examples
+          </span></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="?AnimalsClasses" id="classesofAnimalsText">Animals Classes</a>
+            <a class="dropdown-item" href="?FruitsSeasons" id="seasonalDietText">Seasonal Diet</a>
+            <a class="dropdown-item" href="?TheNumbers" id="theNumbersText">The Numbers</a>
+            <a class="dropdown-item" href="?FallingAngles" id="fallingAnglesText"> Falling Angles </a>
+            <a class="dropdown-item" href="?AppGame" id="theAppGameText">The App Game</a>
+            <a class="dropdown-item" href="?BiodegradableMaterials" id="biodegradableMaterialText">Biodegradable Material</a>
+            <a class="dropdown-item" href="?DegradationTime" id="howLongForDegradationText">How long for Degradation?</a>
+            <a class="dropdown-item" href="?MultiCulti" id="multiCultiText">MultiCulti Game</a>
+            <hr class="dropdown-divider">
+            <a class="dropdown-item" href="?AncientGreekSyntax" id="ancientGreekSyntaxText">Ancient Greek Syntax</a>
+            <a class="dropdown-item" href="?ancientparenthetic" id="ancientparentheticText">Ancient Parenthetic</a>
+            <a class="dropdown-item" href="?history" id="historyText">History</a>
+            <a class="dropdown-item" href="?latin" id="latinText">Latin</a>
+            <a class="dropdown-item" href="?philosophy" id="philoshophyText">Philosophy</a>
+            <a class="dropdown-item" href="?AncientGreekNouns" id="ancientGreekNounsText">Ancient Greek Nouns</a>
+            <a class="dropdown-item" href="?AncientGreekAnimals" id="AncientGreekAnimalsText">Ancient Greek Animals</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span id="help">
+          Resources
+          </span></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/sorbet/manuals/manual-eng.pdf" target="_blank" id="manual">User Manual</a>
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="publicationsDropdown">Publications</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="publications/SorBETmath.pdf" target="_blank">Sorbet Math</a>
+                        <a class="dropdown-item" href="publications/SorBETCT.pdf" target="_blank">Sorbet CT</a>
+                        <!-- Add more publication links as needed -->
+                    </div>
+                </li>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span id="about">
+          About
+          </span></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="info/info.html" target="_blank" id="information">About SorBET</a>
+        </li>
+    </ul>
+
+
+    <ul class="navbar-nav" >
+      <span style = "padding: 5px;" id="backgroundSpan">
+        <!--<label for="autostart">autostart</label>
+        <input type = "checkbox" id = "autostart" />-->
+        <label for="background">background</label>
+        <input type = "checkbox" id = "background" />
+        </span>
+        <label for="camera">camera</label>
+        <input type = "checkbox" id = "camera" />
+    </ul>
+
+    <ul class="navbar-nav ml-auto" >
+      <span style = "padding: 5px;">
+        <button class="btn btn-success navbar-btn" id="playButton"> <i class="fas fa-play"></i><span id="play">Play</span></button>
+        <button class="btn btn-warning navbar-btn" id="editButton" > <i class="fas fa-edit"></i><span id="edit">Edit</span></button>
+        <button class="btn btn-primary navbar-btn" id="downloadButton"> <i class="fas fa-download"></i><span id="download">Download</span></button>
+      </span>
+    </ul>
+  </nav>
+  <div id = "introArea" class = "container-fluid intro-area">   
+    <!-- intro area. Appears when the page loads -->
+    <div class="row ">
+      <div class = "col-sm-9 text-center" style="padding-left: 25%">
+        <!-- <h1 class="display-5 ">Sor.B.E.T. </h1> -->
+	<img src="media/imgs/sorbet.png" alt="SorBET Logo" class="display-5">
+        <h4 style="color:#142d4c;"><span id="introText"> Sorting Based on Educational Technology </span></h4>
+        <h5 style="color:#142d4c;"><b><span id="introSubText"> Design and Play Sorting Games</span></b></h5>
+        <button id="designButton" class="intro-button text-center"><i class="fas fa-tools" style=font-size:48px;"></i><span id="designG"> Design a Game </span> </button>
+        <input type="file" name="file" id="loadGame" class="inputfile" />
+        <label for="loadGame" class="intro-button" style="width:244px; "><i class="far fa-folder-open"style="font-size:48px;"></i><span id="loadG">	Load Game </span></label>
+      <!--  <button id="examplesButton" onclick="showExamplesTable();" class="intro-button"><i class="fas fa-gamepad"style="font-size:48px;"></i> Play Online Demos </button>-->
+      </div>
+      <div class = "col-sm-3 float-right img-fluid">
+        <img src="media/imgs/sorter_intro.png" style="width:100%;" >
+      </div>
+    </div>
+
+  </div>
+
+  <div id = "gameScene" class = "container-fluid game-area  " > 
+     <!--the game scene. Visible when playing a game -->
+    <div class="row">
+      <div class ="col-1 text-center font-weight-bold">
+        <p id="count"> SCORE </p>
+        <div id="score" class="score"> 0/0 </div>
+        <button id="stopButton" class="btn btn-danger" style="margin-top:30px;"><span id="stop"> STOP</span></button>
+    </div>
+    <div class ="col-sm-9">
+      <button id="startButton" class = "startButton"><span id="start" >START</span></button>
+      <canvas id="myCanvas" width="1200" height="600"></canvas>
+    </div>
+    </div>
+  </div>
+
+  <div id = "designArea" class = "container-fluid design-area ">
+    <!--the game design area. Visible when designing a game -->
+
+	<div class="popUpHeader">
+		<strong><span id="BlocklyTitle"> Game Database: </span></strong>
+	</div>
+    <div class="row">
+      <div class ="col ">
+        <div id= "data" class = "data">
+            <div id="data_bar" class= "data_bar ">
+              <input type="image" src="imgs/add.png" width="20px" height="20px" style="float:right" onclick="SorterGame.addField()" id = "addAttribute"  data-toggle="tooltip" data-placement="top" title="Add Category (column)"/>
+                 <input type="image" src="imgs/delete.png" width="20px" height="20px" onclick="SorterGame.deleteField()" id="deleteFieldIcon" data-toggle="tooltip" data-placement="top" title="Delete selected category (column)" id="delCat" style="float:right; "/>
+            </div>
+            <div id = "tableContainer" class = "table-area table-responsive ">
+              <table id="datatable"class=" table">
+                 <thead >
+                   <tr>
+                     <th>
+                       <input type="image" src="imgs/delete.png" width="20px"  style="float:left; visibility: visible" onclick="SorterGame.deleteElement()" id="deleteIco" data-toggle="tooltip" data-placement="top"  title="Delete object (row)" />
+                       <input id="addPointIcon" type="image" src="imgs/add.png" width="20px" style="float:left; "onclick="SorterGame.newEntry(0)" id = "addPoint" data-toggle="tooltip" data-placement="top"  title="Add object (row)" >
+                          <span id="objects_Name"> OBJECTS </span>
+                     </th>
+                     <!--<th><input type="text" class="tableField" id="field" value="Field1" />-->
+                       <th>
+                        <input type="text" class="tableField" id="field" value="Field1" />
+                        <input type = "checkbox" id = "2_check" />
+                        <span> </span>
+                     </th>
+                     <th>  <input type="text" class="tableField" id="field2" value="Field2" />
+                           <input type = "checkbox" id = "3_check"onclick ="SorterGame.selectField (this)"/>
+                           <span> </span>
+                     </th>
+                   </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+	  <script>
+		function validateInput(input) {
+			// Replace any special characters with an empty string
+			input.value = input.value.replace(/[^\w\s]/gi, '');
+		}
+		</script>
+		
+    <!-- Blockly code-->
+	<div class="popUpHeader">
+		<strong><span id="BlocklyTitle"> Game Programming: </span></strong>
+	</div>
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Gamestart</button>
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Gameplay</button>
+        <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Gameover</button>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+        <div class=blocklyDiv id="blocklyDivGamestart"></div>
+      </div>
+      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+        <div class=blocklyDiv  id="blocklyDivGameplay"></div>
+      </div>
+      <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
+        <div class=blocklyDiv id="blocklyDivGameover"></div>
+
+      </div>
+    </div>
+
+      <!--design instructions editor-->
+      <div id="designInstructions"	>
+        <div class = "popUpHeader"> <strong> <span id="instructionTitle1"> Game Instructions </span></strong>
+          <img id="close" src="../sorbet/imgs/gameinstr.png" width="30" height="30"> 
+        </div>
+        <textarea id="instructionsEditor">  </textarea>
+      </div>
+  
+      <!--side bar with design instructions button-->
+      <!--
+      <div id ="sideCol" class = "col-sm-1">
+        <ul>
+          <li>
+            <input id="addInstructions" type = "image" 
+            src="http://etl.ppp.uoa.gr/choico/media/imgs/instructions.png"
+             title = "Add game instructions" onclick = "SorterGame.addInstructions()"/>
+          </li>
+        </ul>
+      </div>-->
+ 
+  </div>
+
+
+
+<!-- The Modals -->
+
+<!-- game instructions modal -->
+<div id="gameInstructions" class="modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+     <div class="modal-content">
+       <div class="modal-header green">
+          <h5 class="modal-title w-100" id="instructions2">Game Instructions</h5>
+          <button type="button" class="btn-close" onclick="SorterGame.togglePlayInstructions();" aria-label="Close"></button>
+       </div>
+       <div class="modal-body" id="instructions">
+       </div>
+       <div class="modal-footer green">
+         <h5 class = "w-100">	<button onclick="SorterGame.togglePlayInstructions();" id="letsPlayBtn" class="modal_button"> Let's Play! </button></h5>
+       </div>
+     </div>
+  </div>
+</div>
+
+<!-- Game End Modal-->
+<div class="modal " id="gameOverModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><span id="gameOver">The game has finished!</span></h4>
+        <button type="button" class="close" id="closeW" onclick="closeModal();">&times;</button>
+      </div>
+        <button type="button" class="btn btn-warning" data-bs-toggle="collapse"
+          data-bs-target="#statistics">
+          <span id="show">Show Score and Statistics</span></button>
+        <div id="statistics" class="collapse">
+          <h5 id="score-modal"> </h5>
+          <h5 id="classtable"> Classification Table: </h5>
+          <table id = "playAnswersTable">
+            <thead>
+              <tr> <th><span id="category"> Category</span> </th>
+                  <th><span id="classifObj"> Objects you classified </span> </th>
+            </tr>
+            </thead>
+            <body>
+              <tr> <td> </td></tr>
+            </body>
+            </table>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="downloadScore();">  <i class="fas fa-download"></i><span id="downloadScore">Download Score</span></button>
+        <button type="button" class="btn btn-danger" onclick="closeModal();"><span id="close">Close</span></button>
+      </div>
+
+    </div>
+  </div>
+</div>
+  </body>
+
+</html>

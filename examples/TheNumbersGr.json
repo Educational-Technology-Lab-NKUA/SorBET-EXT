@@ -1,0 +1,120 @@
+ {
+  "gameObjects": [
+    {
+      "right": [
+        1,
+        5
+      ],
+      "text": "432",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1,
+        3
+      ],
+      "img": "data:image/jpeg;base64,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",
+      "type": "image",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1,
+        4
+      ],
+      "text": "2/3",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1,
+        2
+      ],
+      "text": "0,3",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1,
+        9
+      ],
+      "text": "6,99",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1,
+        5
+      ],
+      "text": "+9",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [],
+      "text": "0",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1,
+        6
+      ],
+      "text": "-50",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1,
+        7
+      ],
+      "text": "53",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    }
+  ],
+  "categories": [
+    {
+      "text": "Πραγματικός"
+    },
+    {
+      "text": "Ρητός"
+    },
+    {
+      "text": "Άρρητος"
+    },
+    {
+      "text": "Κλασματικός"
+    },
+    {
+      "text": "Θετικός"
+    },
+    {
+      "text": "Αρνητικός"
+    },
+    {
+      "text": "Ακέραιος"
+    },
+    {
+      "text": "Φυσικός"
+    },
+    {
+      "text": "Δεκαδικός"
+    }
+  ]
+}

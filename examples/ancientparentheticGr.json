@@ -1,0 +1,294 @@
+ {
+  "gameObjects": [
+    {
+      "right": [
+        1
+      ],
+      "text": "πτωχός",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        2
+      ],
+      "text": "νέος",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        3
+      ],
+      "text": "σώφρων",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        4
+      ],
+      "text": "ἁπλοῦς",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        5
+      ],
+      "text": "ἅρπαξ",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        6
+      ],
+      "text": "καλός",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        3
+      ],
+      "text": "εὐδαίμων",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        5
+      ],
+      "text": "βλάξ",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1
+      ],
+      "text": "βαρύς",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        2
+      ],
+      "text": "σοφός",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        6
+      ],
+      "text": "μέγας",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        6
+      ],
+      "text": "ῥᾴδιος",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1
+      ],
+      "text": "μέλας",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        6
+      ],
+      "text": "ταχύς",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        4
+      ],
+      "text": "εὔνους",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        2
+      ],
+      "text": "μαλακός",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        3
+      ],
+      "text": "ἄκρατος",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        6
+      ],
+      "text": "ἀγαθός",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        5
+      ],
+      "text": "λάλος",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1
+      ],
+      "text": "θερμός",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        6
+      ],
+      "text": "κακός",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1
+      ],
+      "text": "ἔνδοξος",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        3
+      ],
+      "text": "ἄσμενος",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        2
+      ],
+      "text": "ἁπαλός",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        5
+      ],
+      "text": "κλέπτης",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1
+      ],
+      "text": "γενναῖος",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        2
+      ],
+      "text": "δυνατός",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        6
+      ],
+      "text": "μικρός",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        5
+      ],
+      "text": "πλεονέκτης",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        6
+      ],
+      "text": "ὀλίγος",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    }
+  ],
+  "categories": [
+    {
+      "text": "-ότερος,-ότατος"
+    },
+    {
+      "text": "-ώτερος,-ώτατος"
+    },
+    {
+      "text": "-έστερος,-έστατος"
+    },
+    {
+      "text": "-ούστερος,-ούστατος"
+    },
+    {
+      "text": "     -ίστερος,-ίστατος"
+    },
+    {
+      "text": "   Ανώμαλα"
+    }
+  ]
+}

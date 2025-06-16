@@ -1,0 +1,204 @@
+* { padding: 0; margin: 0; }
+
+canvas {
+  background-image: url('../media/imgs/ms.png');
+  display: block;
+  background-size: cover; /* Ensures the image covers the entire canvas */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
+.blocklyDiv {
+    width:800px; height:400px;
+    display:block;
+
+}
+
+.navbar-custom {
+  background-color: #8AE59E;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: black;
+    }
+
+ #openFile {
+ height: 140px;
+ width:250px;
+  	padding-right: 5px;
+ 	float:left;
+ 	background:url(media/imgs/open_file_eng.png);
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+     overflow: hidden;
+ 	margin-left: 15px;
+ 	cursor: pointer;
+
+ }
+
+ #openFile input {
+     display: block !important;
+     width: 100% !important;
+     height: 100% !important;
+     opacity: 0 !important;
+     overflow: hidden !important;
+ 	cursor: pointer;
+ }
+
+
+
+
+.table-area {
+  position: relative;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+}
+
+ .data {
+    padding:0px;
+     float:left;
+     margin: 5px;
+     height: 90%;
+     max-height: 500px;
+ }
+
+ .data_bar {
+     width: 99%;
+     background-color: white;
+     min-height:30px;
+     padding: 2px;
+
+ }
+
+ .table-responsive {
+
+ }
+
+
+ table.datatable {
+     border-collapse: collapse;
+     float:left;
+     height: 90%;
+     text-align: center;
+ }
+ table.datatable tbody,
+ table.datatable thead { display: block; }
+
+
+
+ table.datatable tbody {
+
+
+ }
+
+
+/*
+ #tableContainer {
+     width: 100%;
+     overflow:hidden;
+
+ }
+ #headerContainer {
+     width: 100%;
+     position: relative;
+
+ }#bodyContainer {
+      width: 100%;
+      overflow:auto;
+  }*/
+
+.table{
+    --bs-table-bg:#C16E70 ;  /* gia to sosto hroma ton pinakon me to Bootstrap */
+}
+ .data th {
+     background: #C16E70    ;
+     font-size:12px;
+     font-family:Arial;
+     font-weight:normal;
+     color:#ffffff;
+     text-align:center;
+     font-style: bold;
+     min-width:100px;
+     padding: 5px;
+     border: 1px solid;
+     margin: 5px;
+
+ }
+ .data th input {
+     padding-right: 3px;
+ }
+.data td {
+   min-width:100px;
+   color:#000000;
+   background-color: white;
+      text-align:center;
+}
+
+thead th
+{
+    position: sticky;
+    top: 0px;
+}
+
+ .data tr {
+     background-color: #f2f2f2;
+ }
+ .tableField {
+     border:none;
+     background-color:rgba(256, 256, 256, 0.5);
+     width: 100%;
+     text-align: center;
+
+ }
+
+ .tableField:focus {
+     border-color: #4488cc;
+     border-style: solid;
+     border-width: 1px;
+     outline: 0;
+
+ }
+
+ .selectedField {
+     background: rgba(0,0,255,1);
+
+     border: 1px solid black;
+
+ }
+ #deleteIco {visibility:hidden;}
+ #settingsIco {visibility:hidden;}
+/*
+ .fieldSettings{
+
+     background-color: rgba(137, 127, 127);
+     border: 2px black solid;
+     position: absolute;
+     top: 20%;
+     left: 60%;
+     visibility: hidden;
+     font-family: Verdana;
+     font-size: 14px;
+     width: 15%;
+ }
+ .fieldSettings select {
+
+
+ }*/
+
+ .bar {
+     width: 100%;
+     height: 15px;
+     background:rgba(121, 184, 134, 0.61);
+
+ }
+
+
+ .selectedRow {
+     background: rgba(0,0,255,1);
+
+     border: 1px solid yellow;
+
+ }

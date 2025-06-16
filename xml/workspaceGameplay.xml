@@ -1,0 +1,17 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none">
+  <variables>
+    <variable id="B%L.nBV-Ps7I?@!R09Ek">score</variable>
+    <variable id="9OK.?r3mON2J;7%kPeKZ">density</variable>
+    <variable id="L1?T4E?`Q4*bDSaC9NLc">speed</variable>
+  </variables>
+  <block type="controls_if" id="P}E7n9+$S)|}]YhV*}9u" x="12" y="37"></block>
+  <block type="variables_get" id="tE87a6Mtmz:jMW!?t)hI" x="13" y="137">
+    <field name="VAR" id="B%L.nBV-Ps7I?@!R09Ek">score</field>
+  </block>
+  <block type="variables_get" id="{11}.cKM9AA}#wPU^,)T" x="13" y="187">
+    <field name="VAR" id="9OK.?r3mON2J;7%kPeKZ">density</field>
+  </block>
+  <block type="variables_get" id="tHTQmyFry|u#l!LvY=l0" x="12" y="237">
+    <field name="VAR" id="L1?T4E?`Q4*bDSaC9NLc">speed</field>
+  </block>
+</xml>

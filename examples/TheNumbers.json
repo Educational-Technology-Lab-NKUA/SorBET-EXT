@@ -1,0 +1,127 @@
+ {
+  "gameObjects": [
+    {
+      "right": [],
+      "text": "√2",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        6,
+        9
+      ],
+      "text": "-54,3",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1,
+        5
+      ],
+      "text": "432",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1,
+        4
+      ],
+      "text": "2/3",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1,
+        2
+      ],
+      "text": "0,3",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1,
+        9
+      ],
+      "text": "6,99",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1,
+        5
+      ],
+      "text": "+9",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [],
+      "text": "0",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1,
+        6
+      ],
+      "text": "-50",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    },
+    {
+      "right": [
+        1,
+        7
+      ],
+      "text": "53",
+      "type": "text",
+      "num": "1",
+      "used": 0
+    }
+  ],
+  "categories": [
+    {
+      "text": "Real"
+    },
+    {
+      "text": "Rational"
+    },
+    {
+      "text": "Irrational"
+    },
+    {
+      "text": "Fractional"
+    },
+    {
+      "text": "Positive"
+    },
+    {
+      "text": "Negative"
+    },
+    {
+      "text": "Integer"
+    },
+    {
+      "text": "Natural"
+    },
+    {
+      "text": "Decimal"
+    }
+  ]
+}

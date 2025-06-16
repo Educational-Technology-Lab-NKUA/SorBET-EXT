@@ -1,0 +1,24 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none">
+  <variables>
+    <variable id="2P}0yi/Vm4K~^R%.#tC(">density</variable>
+    <variable id="oC9z~-PV!R/U5LS^$X!V">speed</variable>
+  </variables>
+  <block type="variables_set" id="Rp?80BC$n?^#gjvPM_@1" x="13" y="38">
+    <field name="VAR" id="2P}0yi/Vm4K~^R%.#tC(">density</field>
+    <value name="VALUE">
+      <block type="math_number" id="`G^Yg+5BU6%)0D2ilXo5">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="hLnC/T]=P1=Dg)0y8TjM">
+        <field name="VAR" id="oC9z~-PV!R/U5LS^$X!V">speed</field>
+        <value name="VALUE">
+          <block type="math_number" id="72Mpj7OZBorz%=_pv{f^">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>

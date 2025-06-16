@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>What's new</title>
+
+</head>
+<h1 > ChoiCo updates
+</h1>
+<body>
+  <div class="container">
+    <div >
+      <h2> 01/07/2020:New Features, Improvements</h2>
+      <p> <strong> New Feature: </strong> The player can now download the game progress (Click Game Progress->Donwload Score)</p>
+      <p> <strong> New Feature: </strong> The system informs the player for 'bugs' in the blockly code (e.g. a variable that is not a field anymore)</p>
+      <p> <strong> Improvement: </strong> Game instructions and Game Ends pop up windows appear as 'modals' with a better design</p>
+      <p> <strong> Improvement: </strong> The option "Max no of points" is removed from the Design Mode</p>
+      <p> <strong> Improvement: </strong> Multiple UI improvements</p>
+
+    </div>
+    <hr/>
+    <div >
+      <h2> 20/05/2020:Bugs Fixed</h2>
+      <p> <strong> Bug Fixed: </strong> Bug with decemical calculations fixed </p>
+      <p> <strong> Bug Fixed: </strong> Wrong position of the image thumbnail in the database cell (when the type of field is image)</p>
+
+    </div>
+    <hr/>
+    <div >
+      <h2> 19/3/2020:Bugs Fixed, Improvements </h2>
+      <p> <strong> Bug Fixed: </strong> Map covered info table in small resolutions </p>
+      <p> <strong> Bug Fixed: </strong> Points lebel got hidden sometimes</p>
+      <p> <strong> Improvement: </strong> Calibration of the map and auto transformation of co-ordinaties when a game is loaded in different resolutions and screens. </p>
+      <p> <strong> Improvement: </strong>Css improvments; Larger map, smaller sidebars, larger point info table</p>
+
+    </div>
+    <hr/>
+  <div  >
+    <div >
+      <h2> 07/11/2019: Bugs fixed, improvements </h2>
+      <p> <strong> Bug Fixed: </strong> Field value was lost after changing field type from 'formula' to 'number' Bug when changing type from 'formula' to 'image' </p>
+      <p> <strong> Bug Fixed: </strong> Game didn't work if popup messages included the character " </p>
+      <p> <strong> Improvement: </strong> Games Updated </p>
+    </div>
+    <hr/>
+  <div  >
+    <h2> 04/05/2019: Bugs fixed </h2>
+    <p> <strong> Bug Fixed: </strong> User could remove Main Layer under some circumstances (designMode.js)</p>
+    <p> <strong> Improvement: </strong> Spaces in variable names are now automatically replaced with underscore (_). Special characters are automatically removed. </p>
+  </div>
+  <hr />
+  <div  >
+    <h2> 16/04/2019: Bugs fixed </h2>
+    <p> <strong> Bug Fixed: </strong> When loading a game that uses 'Image' parameter type, the database didn't displayed the images (datatable.js)</p>
+    <p> <strong> Bug Fixed: </strong> Bug when reading the 'setDummy' option while playing (playMode.js) </p>
+  </div>
+  <hr />
+  <div  >
+    <h2> 25/03/2019: Bugs fixed, improvements </h2>
+    <p> <strong> Bug Fixed: </strong> When I added a new database entry, it created a 'number' cell in a 'formula' type column. (datatable.js) </p>
+    <p> <strong> Bug Fixed: </strong> Commands 'setBackgroundTo' didn't work correctly for layers other than Main. (blocks.js, map.js) </p>
+    <p> <strong> Improvement: </strong> Map calibration for different resolutions and pixel ratios. (map.js, styles.js, initialize.js, playmode.js) </p>
+    <p> <strong> Improvement: </strong> Smaller pin icons on map (map.js) </p>
+    <p> <strong> Improvement: </strong> New sound options for the command "play sound" (blocks.js) </p>
+  </div>
+  <hr />
+  <div >
+    <h2> 27/02/2019: New features, bugs fixed, improvements </h2>
+    <p> <strong> New feature: </strong> Database columns can now be moved right or left. (datatable.js) </p>
+    <p> <strong> New feature: </strong> Database columns can now be shorted. (datatable.js) </p>
+    <p> <strong> Bug Fixed: </strong> After loading a game that uses 'random' formula in database, the numeric value after 'to' in the random formula was missing. (designMode.js)</p>
+  </div>
+  </div>
+</body>
+<style>
+body {background-color: lightgrey;font-family: consolas; }
+h2   {font-size: 18px; color: black; background-color:	#ffe5e5; text-decoration: none; padding: 2px;}
+h1   {margin-left: 400px;}
+p    {color: black; background-color: #ffffe6; font-family: consolas;}
+div {background-color: #ffffe6;}
+.container {width: 900px; height: 500px; overflow-y: scroll; margin-left: 50px; padding: 10px;}
+
+</style>
+
+</html>

@@ -1,0 +1,93 @@
+.intro-button {
+    cursor: pointer;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 3vh;
+    background-color: #0AD69C;
+    height: 100px;
+    width: 300px;
+    margin-top: 10px;
+    display:inline-grid;
+    text-align: center;
+}
+.intro-button:hover {background-color: #079C72;}
+
+
+.intro-area {
+  margin-top: 80px;
+  background: #DAC4F7;
+  height: 768px;
+  padding: 20px;  /* Add padding to give space around the content */
+}
+.game-area {
+  margin-top: 80px;
+  display:none;
+  background-color: #FFEFD3;
+  height: 768px;
+}
+.design-area {
+  margin-top: 80px;
+  height: 768px;
+  background: #FFEFD3;
+  display:none;
+}
+
+.inputfile {
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+ cursor: pointer;
+}
+.inputfile_label {
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 3vh;
+  background-color: #7EBDC3;
+  height: 100px;
+  width: 300px;
+  margin-top: 10px;
+  display: block;
+}
+
+.startButton {
+  position: absolute;
+  top:50%;
+  left:50%;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.startButton:hover {background-color: #3e8e41}
+
+.startButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.score {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #c1edf7;
+}
+
+canvas{
+  touch-action:none;  /*gia th swsth doyleia ths afhs.*/
+}
+

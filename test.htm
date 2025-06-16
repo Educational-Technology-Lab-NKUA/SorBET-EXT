@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="./css/designCSS.css" />
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script src="https://unpkg.com/blockly/blockly.min.js"></script>
+
+<!--
+<script src="js-libraries/google-blockly-7faafe0/blockly_compressed.js"></script>
+<script src="js-libraries/google-blockly-7faafe0/blocks_compressed.js"></script>
+ <script src="js-libraries/google-blockly-7faafe0/en.js"></script>
+ <script src="js-libraries/google-blockly-7faafe0/javascript_compressed.js"></script>
+ <script src="js-libraries/google-blockly-7faafe0/python_compressed.js"></script>
+-->
+
+</head>
+<body>
+  <ul class="nav nav-pills">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="examples">Online Examples</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="?AnimalsClasses"  id="classesofAnimalsText">Classes of Animals</a></li>
+        <li><a class="dropdown-item" href="?FruitsSeasons" id="seasonalDietText">Seasonal Diet</a></li>
+        <li><a class="dropdown-item" href="?TheNumbers" id="theNumbersText">The Numbers</a></li>
+        <li><a class="dropdown-item" href="?AppGame" id="theAppGameText">The App Game</a></li>
+        <li><a class="dropdown-item" href="?"></a></li>
+        <li><a class="dropdown-item" href="?"></a></li>
+        <li><a class="dropdown-item" href="?"></a></li>
+        <li><a class="dropdown-item" href="?"></a></li>
+        <li><a class="dropdown-item" href="?"></a></li>
+        <li><hr class="dropdown-divider"></li>
+      </ul>
+    </li>
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"  id="help">Help</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="/sorbet/manuals/manual-eng.pdf" target="_blank" id="manual">User Manual</a></li>
+      <li><a class="dropdown-item" href=info/info.html target="_blank" id="information">About</a></li>
+
+    </ul>
+  </ul>
+<!--
+  <ul class="navbar-nav">
+    <li class="nav-item dropdown">
+     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><span id="examples">Online Examples</span></a>
+     <div class="dropdown-menu">
+       <a class="dropdown-item" href="?AnimalsClasses" id="classesofAnimalsText">Classes of Animals</a>
+       <a class="dropdown-item" href="?FruitsSeasons" id="seasonalDietText">Seasonal Diet</a>
+       <a class="dropdown-item" href="?TheNumbers" id="theNumbersText"> The Numbers </a>
+       <a class="dropdown-item" href="?AppGame" id="theAppGameText">The App Game</a>
+        <a class="dropdown-item" href="?BiodegradableMaterials" id="biodegradableMaterialText" >Biodegradable Material</a>
+          <a class="dropdown-item" href="?DegradationTime" id="howLongForDegradationText">How long for Degradation?</a>
+          <a class="dropdown-item" href="?AncientGreekSyntax" id="ancientGreekSyntaxText">Ancient Greek Syntax</a>
+          
+          <a class="dropdown-item" href="?AncientGreekNouns" id="ancientGreekNounsText">Ancient Greek Nouns</a>
+            <a class="dropdown-item" href="?AncientGreekAnimals" id="AncientGreekAnimalsText">Ancient Greek Animals</a>
+     </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><span id="help">
+        Help
+      </span></a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/sorbet/manuals/manual-eng.pdf" class="dropdown-item" target="_blank" id="manual">User Manual</a>
+        <a class="dropdown-item" href=info/info.html target="_blank" id="information">About</a>
+      </div>
+    </li>
+  </ul>
+-->
+
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+      <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+      <div class=blocklyDiv id="blocklyDivGamestart"></div>
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+      <div class=blocklyDiv  id="blocklyDivGameplay"></div>
+    </div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">.23..</div>
+    <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">.4..</div>
+  </div>
+<!--
+  <ul class="nav nav-tabs"  role="tablist">
+    <li class=" nav-item" role="presentation">
+      <a class="nav-link" id="tabgamestart" data-bs-toggle="tab"  type="button" role="tab"
+       aria-controls="tabgamestart" aria-selected="true"
+       href="#gamestart">Gamestart</a></li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="tabgamestart" data-bs-toggle="tab"  type="button" role="tab"
+       aria-controls="tabgameplay" aria-selected="false"
+      data-toggle="tab" href="#gameplay">Gameplay</a></li>
+   
+  </ul>
+  
+  <div class="tab-content">
+    <div id="gamestart" class=" tab-pane fade" role="tabpanel"
+     aria-labelledby="tabgamestart" >
+      
+      <p>tab1 content</p>
+    </div>
+    <div id="gameplay"  class=" tab-pane fade" role="tabpanel"
+    aria-labelledby="tabgameplay">
+
+    </div>
+  </div>
+-->
+
+   
+    
+
+
+
+       <!-- blockly workspaces tabs-->
+       <!--
+  <section class="tabs-wrapper">
+    <div class="tabs-container">
+      <div class="tabs-block">
+        <div class="tabs">
+	<input type="radio" name="tabs" id="tab1" checked="checked" />
+						
+          <label for="tab1"> Game start</label>
+          <div class="tab">
+        </div>
+
+	<input type="radio" name="tabs" id="tab2" onclick="refresh()" />
+						
+          <label for="tab2"> Gameplay</label>
+              <div class="tab"> 
+              </div>
+
+	<input type="radio" name="tabs" id="tab3" />
+						
+          <label for="tab3">Game over</label>
+          <div class="tab">
+                   <div class=blocklyDiv id="blocklyDivGameover"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section> 
+-->
+ 
+<!--<button onclick="run()">Run code</button>
+-->
+<script>
+
+//this fantastic code from stackoverflow solves the blockly zoom
+   //problem when inside tabs:
+   //https://stackoverflow.com/questions/20705905/bootstrap-3-jquery-event-for-active-tab-change 
+   $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+     
+      window.dispatchEvent(new Event('resize'));
+    });
+
+function loadXml (fileName) {
+  return new Promise ((resolve,reject)=> {
+
+    var jqxhr = $.get(fileName).done (function(result){
+    var serializer = new DOMParser();//XMLSerializer();
+    console.log (fileName + ' loaded successfully')
+    var xml = serializer./*serializeToString*/parseFromString(result, "text/xml").firstChild;
+    resolve (xml)
+  })
+  .fail (function(){console.log (fileName + ' failed to load'); reject('error')})
+});
+}
+
+  loadXml ("xml/toolbox (2).xml").then ( (toolboxXml) =>{
+    alert(toolboxXml)  
+  });
+
+ //blockly
+    /*
+    To "on game start" που είχαμε στην αρχή που θα αρχικοποιει 
+    τα πεδία  speed και ίσως το score, αν και θα ναι by default 0
+	Και το gameplay που θα περιέχει τα conditions
+	"if.. Do.." τα variables και μια εντολή game over
+
+    */
+     /* TODO: Change toolbox XML ID if necessary. Can export toolbox XML from Workspace Factory. */
+   // var toolbox = document.getElementById("toolboxGamestart");
+
+ 
+
+   blocklyZoomParams = {controls: true,
+      wheel: true,
+      startScale: 1.0,
+      maxScale: 3,
+      minScale: 0.3,
+     scaleSpeed: 1.2}
+     //
+     var options = { 
+     // toolbox : toolboxXml, 
+      collapse : true, 
+      comments : true, 
+      disable : true, 
+      maxBlocks : Infinity, 
+      trashcan : true, 
+      horizontalLayout : false, 
+      toolboxPosition : 'start', 
+      css : true, 
+      media : 'https://blockly-demo.appspot.com/static/media/', 
+     
+      scrollbars : true, 
+      sounds : true, 
+      oneBasedIndex : true, 
+      grid : {
+        spacing : 20, 
+        length : 1, 
+        colour : '#888', 
+        snap : false
+      }, 
+      zoom :   blocklyZoomParams /* {
+        controls : true, 
+        wheel : true, 
+        startScale : 1, 
+        maxScale : 3, 
+        minScale : 0.3, 
+        scaleSpeed : 1.2
+      } */
+    };
+
+    const wsXmlGSPath="https://raw.githubusercontent.com/hermolaou/blocklyxml/main/workspaceGamestart.xml"
+    const toolboxXmlGSPath="https://raw.githubusercontent.com/hermolaou/blocklyxml/main/toolboxGamestart.xml"
+    
+    loadXml (wsXmlGSPath).then ((workspaceXml) => {
+      loadXml (toolboxXmlGSPath).then ( (toolboxXml) =>{
+              
+        options.toolbox=toolboxXml
+         /* Inject your workspace */ 
+          workspaceGamestart = Blockly.inject(blocklyDivGamestart
+            /* TODO: Add ID of div to inject Blockly into */, 
+            options);
+
+          /* Load Workspace Blocks from XML to workspace. Remove all code below if no blocks to load */
+
+          /* Load blocks to workspace. */
+          Blockly.Xml.domToWorkspace(workspaceXml, workspaceGamestart);  
+      })
+    })
+   
+    const wsXmlGPPath="https://raw.githubusercontent.com/hermolaou/blocklyxml/main/workspaceGameplay.xml"
+    const toolboxXmlGPPath="https://raw.githubusercontent.com/hermolaou/blocklyxml/main/toolboxGameplay.xml"
+
+    loadXml (wsXmlGPPath).then ((workspaceXml) => {
+      loadXml (toolboxXmlGPPath).then ( (toolboxXml) =>{
+              
+        options.toolbox=toolboxXml
+         /* Inject your workspace */ 
+          workspaceGameplay = Blockly.inject(blocklyDivGameplay
+            /* TODO: Add ID of div to inject Blockly into */, 
+            options);
+
+          /* Load Workspace Blocks from XML to workspace. Remove all code below if no blocks to load */
+
+          /* Load blocks to workspace. */
+          Blockly.Xml.domToWorkspace(workspaceXml, workspaceGameplay);  
+      })
+    })
+
+   
+
+function run()
+{
+    var code = Blockly.JavaScript.workspaceToCode(workspace);
+
+
+    try {
+      alert(code);
+    } catch (e) {
+      alert(e);
+    }
+}
+
+</script>
+</body>
+
+</html>
