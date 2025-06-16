@@ -1,5 +1,6 @@
 # SorBET-EXT
 Sorting Based on Educational Technology developed from Educational Technology Lab, National &amp; Kapodistrian University of Athens
+
 An open, online classification game platform for cultivating Data Literacy and Computational Thinking through play and design.
 
 This extended version includes new features such as:
