@@ -3,7 +3,9 @@ Sorting Based on Educational Technology developed from Educational Technology La
 
 An open, online classification game platform for cultivating Data Literacy and Computational Thinking through play and design.
 
-This extended version includes new features such as:
+You can find the Beta Edition here: http://etl.ppp.uoa.gr/sorbet/
+
+The extended version includes new features such as:
 
 🖐️ Embodied Interaction using hand-tracking (via webcam)
 
@@ -12,6 +14,8 @@ This extended version includes new features such as:
 🖥️ Touchscreen Compatibility with multi-object drag & drop
 
 🧩 A more flexible Design Mode for student-created games
+
+can be found here: https://extendt2.com/widgets/sorbet/
 
 ### 📚 Educational Content & Research Materials
 All **game examples**, **educational resources**, and **research documentation** in this repository are licensed under  
