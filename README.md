@@ -5,7 +5,7 @@ An open, online classification game platform for cultivating Data Literacy and C
 
 You can find the Beta Edition here: http://etl.ppp.uoa.gr/sorbet/
 
-The extended version includes new features such as:
+The extended version, which was developed under the ExtenDT2 EU Project, includes new features such as:
 
 🖐️ Embodied Interaction using hand-tracking (via webcam)
 
@@ -15,7 +15,7 @@ The extended version includes new features such as:
 
 🧩 A more flexible Design Mode for student-created games
 
-can be found here: https://extendt2.com/widgets/sorbet/
+can be found here: [https://extendt2.com/widgets/sorbet/](https://extendt2.lnu.se/widgets/sorbet/)
 
 ### 📚 Educational Content & Research Materials
 All **game examples**, **educational resources**, and **research documentation** in this repository are licensed under  
