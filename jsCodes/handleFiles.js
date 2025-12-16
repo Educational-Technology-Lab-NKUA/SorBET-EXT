@@ -261,6 +261,7 @@ function loadImgFile(evt) {
 
   //Retrieve the first (and only!) File from the FileList object
   var f = evt.target.files[0];
+  var fileName = f.name.replace(/\.[^/.]+$/, "");
   var rowNumber = this.parentNode.parentNode.rowIndex;
   var thumb = this.nextElementSibling;
   if (!f) {
@@ -282,6 +283,7 @@ function loadImgFile(evt) {
         var r = new FileReader();
         r.onload = function(e) {
             var uri = e.target.result;
+			
             /*var id =   parseInt(SorterGame.dataTable.tBodies[0].rows[rowNumber].cells[0].innerHTML)
                 var newImg = {id: id, imguri: uri}
                 var img = myGame.images.find(x=>x.id === id)
@@ -290,6 +292,9 @@ function loadImgFile(evt) {
                     else
                 SorterGame.images.push(newImg);*/
             thumb.src = uri
+			thumb.name = fileName
+			thumb.dataset.name = fileName
+			thumb.alt = fileName
         }
         r.readAsDataURL(f);
   }

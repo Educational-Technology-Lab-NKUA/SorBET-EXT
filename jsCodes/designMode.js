@@ -134,6 +134,7 @@ SorterGame.prototype.processCel = function(cel, gameObjects) {
                   right: [],
                   img: cel.querySelector(".image-thumb").src,
                   type: type,
+				  name:cel.querySelector(".image-thumb").alt,
                   num: quantity,
                   used: 0
 
@@ -571,7 +572,7 @@ SorterGame.prototype.onChangeObject = function(e) {
 
   this.modifyObjectEvent = {
       ...this.modifyObjectEvent,
-      timestamp: time,
+      timestamp: Date.now(),
       state: {
           ...this.modifyObjectEvent.state,
           idcounter: i,
@@ -639,8 +640,11 @@ SorterGame.prototype.setObjectValues = function(index, objectValues) { //sets th
       case "image":
           element = cell.getElementsByClassName("image-thumb")[0];
           element.src = objectValues.img;
+		  element.dataset.name = objectValues.name
           quantity = cell.getElementsByClassName("how-many")[0];
           quantity.value = parseInt(objectValues.num);
+		  
+		
           break;
           // case "shape":
           //   element = cell.getElementsByTagName("select")[1];

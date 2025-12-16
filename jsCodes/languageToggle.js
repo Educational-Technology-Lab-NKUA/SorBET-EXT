@@ -73,6 +73,7 @@ function refreshLanguage() {
     $("#philoshophyText").html(language.philoshophyText)
     $("#ancientGreekNounsText").html(language.ancientGreekNounsText)
     $("#AncientGreekAnimalsText").html(language.AncientGreekAnimalsText)
+    $("#ArtAndArtistsText").html(language.ArtAndArtistsText)
 
     $("#messageSave").text(language.messageSave)
     $("#name").text(language.name)
@@ -105,6 +106,7 @@ function changeLanguage(lang) {
         $("#historyText").hide();
         $("#latinText").hide();
         $("#philoshophyText").hide();
+        $("#ArtAndArtistsText").hide();
 
         break;
 
@@ -118,6 +120,7 @@ function changeLanguage(lang) {
         $("#historyText").show();
         $("#latinText").show();
         $("#philoshophyText").show();
+        $("#ArtAndArtistsText").show();
 
         break;
 

@@ -59,6 +59,7 @@ latinText:"Latin",
 philoshophyText:"Philosophy",
 ancientGreekNounsText:"Ancient Greek Nouns",
 AncientGreekAnimalsText:"Ancient Greek Animals",
+ArtAndArtistsText:"Art and Artists",
 messageSave:"Please enter a name for the game:",
 name:"name",
 deletemsg:"Please select a category (column) to delete by clicking on its checkbox"
@@ -126,6 +127,7 @@ greek = {
   philoshophyText:"Έλληνες Φιλόσοφοι",
   ancientGreekNounsText:"Αρχαία Ελληνικά Ουσιαστικά",
   AncientGreekAnimalsText:"Αρχαία Ελληνικά Ζώα",
+  ArtAndArtistsText:"Τέχνη",
   messageSave:"Παρακαλώ εισάγετε ένα όνομα για το παιχνίδι:",
   name:"Όνομα",
   deletemsg:"Παρακαλώ επιλέξτε μια κατηγορία (column) να διαγράψετε πατώντας το πλαίσιο ελέγχου της"

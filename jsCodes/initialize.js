@@ -44,6 +44,7 @@ $(document).ready(function () {
 
 	//** changed! */
 	//camera.start();
+	
 	SorterGame = new SorterGame(canvas, gameObjects, categories, elementPerRound);
 
 

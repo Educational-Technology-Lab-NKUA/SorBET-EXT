@@ -22,6 +22,7 @@ class Shape {
 	}
 
 	setImage(img) {
+		
 		var image = document.createElement("img");
 		image.src = img;
 		this.img = image;
@@ -75,15 +76,16 @@ class ShapeTarget extends Shape {
 	}
 }
 class ShapeImage extends Shape {
-	constructor(x, y, w, h, img, right) {
+	constructor(x, y, w, h, img, right,name) {
 		super(x, y);
 		this.w = w || 50;
 		this.h = h || 50;
 		//var shape= this;
 		this.setImage(img);
-
+    
 		this.type = "element";
 		this.right = right;
+		this.name = name;
 	}
 
 	draw(ctx) {
@@ -381,7 +383,28 @@ function SorterGame(canvas, gameObjects, categories, elementsPerRound) {
 			};
 			
 			sendEvent(feedbackMsg);
+			
+			
+			//send again similar object but in JSON format for LA
+			var fallingObj = { correct: this.score,
+					total: this.gameObjects.length, 
+				playAnswers:this.getPlayAnswersInJSON() }
+				
+			var state = {
+				game_progress:   fallingObj ,
+				event_count: this.counters.gameStatisticsCounter,
+			};
+			var feedbackMsg = { id: this.gameID, type: "playmode", 
+				event: "game_statistics_la", state: state,
+					timestamp: Date.now()
+			};
+			
+			sendEvent(feedbackMsg);
+			
 		}
+		
+		
+		
 	};
 
 	this.cameraOnEvent = function () {
@@ -571,7 +594,7 @@ function SorterGame(canvas, gameObjects, categories, elementsPerRound) {
 
 				};
 	
-				sendEvent(feedbackMsg);
+				/*sendEvent(feedbackMsg);*/ //Temporaly disabled by Alisa Lincke
 			
 		}
 	};
@@ -664,9 +687,9 @@ function SorterGame(canvas, gameObjects, categories, elementsPerRound) {
 		},
 		false
 	);
-
+   
 	myState.createTargets(categories);
-
+   
 	// **** Options! ****
 	this.selectionWidth = 2;
 
@@ -775,6 +798,7 @@ SorterGame.prototype.drag = function (cs) {
 };
 
 SorterGame.prototype.loadPlayMode = function () {
+	
 	$("#introArea").hide();
 	$("#gameScene").show();
 	$("#designArea").hide();
@@ -803,6 +827,10 @@ SorterGame.prototype.saveGame = function () {
 
 	//console.log("Event: save game, we can extract game characteristics");
 	//console.log(this.dataTable.outerHTML);
+	
+	//this code added by Alisa Lincke, since the objects recived from state are overrided in line 836
+	var gameObjectsfromState = Array.from(this.gameObjects)
+	
 	this.playAnswers = [];
 	this.categories = [];
 	this.gameObjects = [];
@@ -831,6 +859,16 @@ SorterGame.prototype.saveGame = function () {
 			}
 		}
 	}
+	
+
+	
+	/*this code added by Alisa Lincke to get the name of image files*/
+	gameObjects.forEach((obj, index) => {
+    if (obj.type === "image" && gameObjectsfromState[index]) {
+      obj.name = gameObjectsfromState[index].name;
+    }
+  });
+	
 	for (var q = 0; q < gameObjects.length; q++) {
 		this.dataTableRows.push(gameObjects[q]);
 		for (var j = 0; j < gameObjects[q].num; j++) {
@@ -857,6 +895,7 @@ SorterGame.prototype.saveGame = function () {
 		//but, is it still needed? deselectAllObjects? It seems to be kinda useless
 	});
 	this.shapes = [];
+	
 	this.gameObjects = newgameObjects;
 	//  console.log("gameObjects mesa sto design",gameObjects)
 	this.categories = categories;
@@ -894,6 +933,7 @@ SorterGame.prototype.saveGame = function () {
 };
 
 SorterGame.prototype.start = function () {
+	
 	$("#startButton").hide();
 	$("#stopButton").show();
 	this.score = 0;
@@ -901,7 +941,7 @@ SorterGame.prototype.start = function () {
 	this.unusedgameObjects = [];
 	//this.interval=30;
 	this.playing = true;
-
+	
 	for (var i = 0; i < this.gameObjects.length; i++) {
 		this.unusedgameObjects.push(i);
 	}
@@ -1072,6 +1112,7 @@ SorterGame.prototype.ScoreText = function (x, y, color, text) {
 //Αυτή η λειτουργία διανέμει τα αντικείμενα που πέφτουν κάθε φορά.
 //changed!
 SorterGame.prototype.pickManyElements = function () {
+	
 	//pick gameObject
 	var self = this;
 	this.totalCurrentgameObjects = 0;
@@ -1150,6 +1191,7 @@ SorterGame.prototype.addElement = function (gameObject, gameObject_i) {
 			break;
 
 		case "image":
+		    
 			var image = new Image();
 			var w, h, maxWidth, maxHeight;
 			maxWidth = canvas.width * 0.10;
@@ -1163,7 +1205,8 @@ SorterGame.prototype.addElement = function (gameObject, gameObject_i) {
 			if (w > maxWidth) {
 				w = w * Math.min(maxWidth / w);
 			}
-			shape = new ShapeImage(getRandNumber(canvas.width - 100), 10, w, h, gameObject.img, gameObject.right);
+			
+			shape = new ShapeImage(getRandNumber(canvas.width - 100), 10, w, h, gameObject.img, gameObject.right,gameObject.name);
 			break;
 
 		default:
@@ -1227,19 +1270,19 @@ SorterGame.prototype.checkElementTarget = function (element) {
 		var length = this.playAnswers.length;
 		if (element.img != undefined) {
 	//		this.playAnswers[length - 1].answers.push({ type: "img", uri: element.img.currentSrc, correct: false });
-
-	
+             console.log("HERE!!!")
+			 console.log(element.img)
 			// Check if an element with a specific URI already exists in the answers array
 			const uriExists = this.playAnswers[length - 1].answers.some(answer => answer.type === "img" && answer.uri === element.img.currentSrc);
 			
 			// If the URI doesn't exist, add a new element to the answers array
 			//if (!uriExists) {
-				this.playAnswers[length - 1].answers.push({ type: "img", uri: element.img.currentSrc, correct: false });
+				this.playAnswers[length - 1].answers.push({ type: "img", uri: element.img.currentSrc, name:"", correct: false });
 			//}
 
 		} else {
 			//this.playAnswers[length - 1].answers.push({ type: "text", text: element.text, correct: false });
-	
+	      
 			// Check if an element with a specific URI already exists in the answers array
 			const uriExists = this.playAnswers[length - 1].answers.some(answer => answer.type === "text" && answer.text === element.text);
 					
@@ -1322,11 +1365,14 @@ SorterGame.prototype.checkElementTarget = function (element) {
 				// If the URI doesn't exist, add a new element to the answers array
 				//if (!uriExists) 
 					
+				
 					this.playAnswers[i].answers.push({
 						type: "img",
 						uri: element.img.currentSrc,
+						name:element.name,
 						correct: correctness,
 					});
+				
 			} else {
 				//const uriExists = this.playAnswers[i].answers.some(answer => answer.type === "text" && answer.text === element.text);
 				
@@ -1393,6 +1439,7 @@ For example the information as they appear here in the score and
 	for (var i = 0; i < this.addElementTimeouts.length; i++) {
 		clearTimeout(this.addElementTimeouts[i]);
 	}
+
 
 //remove duplicates from playAnswers. thanks you chatgpt
 	this.playAnswers=this.playAnswers.map((category)=>{
@@ -1568,7 +1615,7 @@ SorterGame.prototype.getMouseList = function (e) {
 
 //changed here to accomodate gameStatistics event
 SorterGame.prototype.getPlayAnswers = function () {
-
+   
 	playAnswers=this.playAnswers.map((answer)=>Object.values(answer));
     playAnswers=playAnswers.map((answer)=>{answer[1]=answer[1].map((obj)=>{
         if(obj.type =="text"){
@@ -1580,6 +1627,7 @@ SorterGame.prototype.getPlayAnswers = function () {
             thumbnail.style.width = "40px"
             thumbnail.style.height = "40px"
             */
+		 		   
            return (([{image:obj.uri,
                 width:90, height:90}, obj.correct.toString()]))
           }
@@ -1587,6 +1635,79 @@ SorterGame.prototype.getPlayAnswers = function () {
     playAnswers.unshift([language.category, language.classifObj]);
 
 	return playAnswers;
+};
+
+/*tTHIS FUNCTION ADDED by ALISA LINCKE for ALA Dashboard*/
+
+SorterGame.prototype.getPlayAnswersInJSON = function () {
+   
+	
+
+	// remove ALL objects with basket === "Category" (without modifying the original)
+	/*const playAnswersWithoutCategory = this.playAnswers.filter(
+	  item => item?.category !== "Category"
+	);
+
+	let playAnswers = playAnswersWithoutCategory.map((answer) => {
+        // answer looks like [basketName, objectsArray]
+        let [basketName, objectsArray] = Object.values(answer);
+
+        // map over objects inside each basket
+        let summary = objectsArray.map((obj) => {
+			
+            if (obj.type === "text") {
+                return {
+                    object_name: obj.text,
+                    correct: obj.correct.toString()
+                };
+            } else {
+                return {
+                    object_name: obj.name,  // or "image" if you want full data URI
+                    correct: obj.correct.toString(),
+                };
+            }
+        });
+
+        return {
+            basket: basketName.replace(/:\s*$/, ""),
+            summary: summary
+        };
+    });*/
+	
+	// remove ALL objects with basket === "Category" (without modifying the original)
+		const playAnswersWithoutCategory = this.playAnswers.filter(
+		  item => item?.category !== "Category"
+		);
+		
+	
+
+		let transformed = {};
+
+		for (let answer of playAnswersWithoutCategory) {
+		  // answer looks like [basketName, objectsArray]
+		  let [basketName, objectsArray] = Object.values(answer);
+		  basketName = basketName.replace(/:\s*$/, ""); // clean trailing colon if any
+
+		  if (!transformed[basketName]) {
+			transformed[basketName] = {};
+		  }
+
+		  for (let obj of objectsArray) {
+			const object_name = obj.type === "text" ? obj.text : obj.name;
+			const correct = obj.correct.toString();
+
+			if (!transformed[basketName][object_name]) {
+			  transformed[basketName][object_name] = {
+				correct: correct,
+				count: 0
+			  };
+			}
+			transformed[basketName][object_name].count += 1;
+		  }
+		}
+   
+    return transformed;
+	
 };
 
 SorterGame.prototype.getState = function () {

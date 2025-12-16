@@ -15,7 +15,7 @@ function setUpCommunication(gameInstance) {
 		elements: [
 			{
 				name: "playmode",
-				events: [/*"clickanddrag" ,*/"game_start", "camera_on_event", "voice_commands_event", "sorted_objects", "game_over", "game_statistics", "active_player", /*"player_performance"*/],
+				events: [/*"clickanddrag" ,*/"game_start", "camera_on_event", "voice_commands_event", "sorted_objects", "game_over", "game_statistics","game_statistics_la", /*"active_player"*/, /*"player_performance"*/],
 			},
 			{
 				name: "database",
